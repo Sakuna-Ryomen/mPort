@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avinash | Portfolio</title>
+  <link rel="icon" type="image/png" href="/assets/logos/favicon.png">
+
+  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Font Awesome (for icons) -->
+  <script src="https://kit.fontawesome.com/a2e00ad947.js" crossorigin="anonymous"></script>
+
+  <!-- Typed.js for typing animation -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="home-style.css" />
+</head>
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">My Portfolio</div>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+ <section class="hero" data-aos="fade-up">
+  <h1>
+    Hi, I'm Avinash<br />
+    <span id="typed-text"></span>
+  </h1>
+  <a href="#projects" class="cta-button">View My Work</a>
+  </section>
+
+
+  <!-- About Section -->
+  <section id="about" class="about" data-aos="fade-right">
+    <img src="assets/me.jpg" alt="My Photo" class="about-img">
+    <div class="about-text">
+      <h2>About Me</h2>
+       <p>Hi, I'm <strong>Avinash Maurya</strong>, a final-year student with a strong interest in web development and technology. I'm currently building my skills in front-end development using HTML, CSS, JavaScript, and exploring frameworks like Flutter and React.</p>
+    <p>I enjoy creating websites and interactive projects as part of my learning journey, and I'm always eager to try out new tools and technologies. I'm also beginning to explore the basics of data analytics, aiming to understand how data can drive decisions and insights.</p>
+    <p>This portfolio is a reflection of what I'm learning and building—one step at a time. I'm excited to keep growing, collaborating, and sharing what I create with the world.</p>
+    </div>
+  </section>
+
+<section id="skills" class="skills-section" data-aos="fade-up">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+    <!-- HTML -->
+    <div class="skill">
+      <svg class="progress-ring" width="120" height="120">
+        <circle class="bg" cx="60" cy="60" r="50" />
+        <circle class="progress" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="78.5" />
+      </svg>
+      <div class="percentage">HTML<br><span>75%</span></div>
+    </div>
+
+    <!-- CSS -->
+    <div class="skill">
+      <svg class="progress-ring" width="120" height="120">
+        <circle class="bg" cx="60" cy="60" r="50" />
+        <circle class="progress" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="157" />
+      </svg>
+      <div class="percentage">CSS<br><span>50%</span></div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="skill">
+      <svg class="progress-ring" width="120" height="120">
+        <circle class="bg" cx="60" cy="60" r="50" />
+        <circle class="progress" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="219.8" />
+      </svg>
+      <div class="percentage">JavaScript<br><span>30%</span></div>
+    </div>
+
+    <!-- Flutter -->
+    <div class="skill">
+      <svg class="progress-ring" width="120" height="120">
+        <circle class="bg" cx="60" cy="60" r="50" />
+        <circle class="progress" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="188.4" />
+      </svg>
+      <div class="percentage">Flutter<br><span>40%</span></div>
+    </div>
+  </div>
+</section>
+
+
+ <section class="testimonials" data-aos="fade-up">
+  <h2>Achievements</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <img src="assets/logos/deloitte.png" alt="Deloitte Logo" class="logo-img" />
+      <p>Completed Cyber Security Virtual Job Simulation with Deloitte Australia.</p>
+      <h4>– Forage, 2025</h4>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="assets/logos/microsoft.svg" alt="Microsoft Logo" class="logo-img" />
+      <p>Certified in Security, Compliance, and Identity Fundamentals (SC-900).</p>
+      <h4>– Microsoft Learn, 2023</h4>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="assets/logos/jmp.jpeg" alt="JM Patel College Logo" class="logo-img" />
+      <p>Participated in IT Workshop on I.T. Project Creation</p>
+      <h4>– Jashbhai Maganbhai College, 2025</h4>
+    </div>
+
+   
+  </div>
+</section>
+
+
+  <!-- Projects Section -->
+ <section id="projects" class="projects" data-aos="fade-up">
+  <h2>My Projects</h2>
+
+  <div class="filter-buttons">
+    <button onclick="filterProjects('all')" class="active">All</button>
+    <button onclick="filterProjects('web')">Web</button>
+    <button onclick="filterProjects('ai')">AI</button>
+    <button onclick="filterProjects('flutter')">Flutter</button>
+  </div>
+
+  <div class="project-grid">
+    <!-- Web Project -->
+    <div class="card project-card web" onclick="openModal('project1')">
+      <h3>
+        <a href="https://github.com/yourusername/smart-campus-hub" target="_blank" onclick="event.stopPropagation();">
+          Smart Campus Hub 🔗
+        </a>
+      </h3>
+      <p>Responsive Web App with admin roles.</p>
+    </div>
+
+    <!-- AI Project -->
+    <div class="card project-card ai" onclick="openModal('project2')">
+      <h3>
+        <a href="https://github.com/yourusername/ProductSenseAI" target="_blank" onclick="event.stopPropagation();">
+          ProductSenseAI 🔗
+        </a>
+      </h3>
+      <p>Multimodal sentiment analyzer (AI).</p>
+    </div>
+
+    <!-- Flutter Project -->
+    <div class="card project-card flutter" onclick="openModal('project3')">
+      <h3>
+        <a href="https://github.com/yourusername/budget-tracker-flutter" target="_blank" onclick="event.stopPropagation();">
+          Budget Tracker App 🔗
+        </a>
+      </h3>
+      <p>Built using Flutter & Firebase.</p>
+    </div>
+
+    <!-- AI Project -->
+    <div class="card project-card ai" onclick="openModal('project4')">
+      <h3>
+        <a href="https://blackbookcontentgenerator-riuajqtvhfxjgihdkoucjv.streamlit.app/" target="_blank" onclick="event.stopPropagation();">
+          BlackBook Content Generator 🔗
+        </a>
+      </h3>
+      <p>Built using Python & Streamlit.</p>
+    </div>
+    <!-- Add more project cards as needed -->
+    <div class="card project-card web" onclick="openModal('project5')">
+      <h3>
+        <a href="https://1drv.ms/u/c/4f7ea5a1ce8e8a72/ES4ndUB3KH9JlP0BKBVpvH0BKie7Gfwjx-2WUPiNpl2F9w?e=Qjvhqu" target="_blank" onclick="event.stopPropagation();">
+          Smart Campus Surviellance 🔗
+        </a>
+      </h3>
+      <p>AI-based surveillance system for campus security.</p>
+    </div>
+
+     <div class="card project-card web" onclick="openModal('project5')">
+      <h3>
+        <a href="#" target="_blank" onclick="event.stopPropagation();">
+         Responsive login Page 🔗
+        </a>
+      </h3>
+      <p>Responsive login page with dynamic role-based access.</p>
+</section>
+
+
+
+<!-- Modals -->
+  <div id="project1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('project1')">&times;</span>
+      <h2>Smart Campus</h2>
+      <p>A responsive campus portal with dynamic login, role-based access, and integration with public college events.</p>
+      <a href="#" class="modal-link">View Live Demo</a>
+    </div>
+  </div>
+
+  <div id="project2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('project2')">&times;</span>
+      <h2>ProductSenseAI</h2>
+      <p>Final-year project using image + text for sentiment detection across Twitter, Reddit, YouTube, etc.</p>
+      <a href="#" class="modal-link">View on GitHub</a>
+    </div>
+  </div>
+
+   <div id="project4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('project4')">&times;</span>
+      <h2>BlackBook Content Generator</h2>
+      <p>Final-year project using Python + Streamlit for Generating BlackBook Content for Students</p>
+      <a href="https://blackbookcontentgenerator-riuajqtvhfxjgihdkoucjv.streamlit.app/" class="modal-link">View on GitHub</a>
+    </div>
+  </div>
+
+
+  <!--Social Media-->
+<section class="social-section">
+  <h2>Connect with Me</h2>
+  <div class="social-icons">
+    <a href="https://github.com/Sakuna-Ryomen" target="_self"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/avinash-maurya-1ab2982a8/" target="_self"><i class="fab fa-linkedin"></i></a>
+    <a href="https://instagram.com/itz.avi4u_" target="_self"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:avinashmaurya261@gmail.com" target="_self"><i class="fas fa-envelope"></i></a>
+  </div>
+</section>
+
+
+
+  <!-- Contact Section -->
+ <section id="contact" class="contact" data-aos="fade-up">
+  <h2>Contact Me</h2>
+  <form id="contact-form">
+    <input type="text" name="user_name" placeholder="Your Name" required />
+    <input type="email" name="user_email" placeholder="Your Email" required />
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+  <!-- Back to Top -->
+  <button id="toTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
+
+
+
+  <!-- Scripts -->
+  <script>
+    AOS.init();
+    window.addEventListener("scroll", function () {
+      const toTop = document.getElementById("toTop");
+      toTop.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+  </script>
+  <script>
+  // Typing animation
+  var typed = new Typed('#typed-text', {
+    strings: ["Front-End Developer.", "Tech Enthusiast.", "Learner.", "Final Year Student."],
+    typeSpeed: 50,
+    backSpeed: 25,
+    backDelay: 1500,
+    loop: true
+  });
+
+  // Dark Mode
+  const toggle = document.getElementById('toggleDark');
+  const body = document.body;
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+  });
+
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("g6G5K61qZMs8yKmiD"); // Replace with your actual EmailJS key
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    emailjs.sendForm('service_zv5oglb', 'template_iejlgdb', this)
+      .then(() => {
+        alert("Message Sent!");
+        this.reset();
+      }, (error) => {
+        alert("Failed to send: " + error.text);
+      });
+  });
+</script>
+
+<script>
+  function filterProjects(category) {
+    const cards = document.querySelectorAll('.project-card');
+    const buttons = document.querySelectorAll('.filter-buttons button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    cards.forEach(card => {
+      if (category === 'all' || card.classList.contains(category)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+<script>
+  window.addEventListener("load", () => {
+    document.getElementById("preloader").style.display = "none";
+  });
+</script>
+
+<script
+      src="https://kit.fontawesome.com/0061809692.js"
+      crossorigin="anonymous"
+    ></script>
+
+  <script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+</script>
+<script>
+  document.querySelectorAll('.circular-skill').forEach(skill => {
+    const percent = skill.getAttribute('data-percent');
+    const circle = skill.querySelector('svg circle:last-child');
+    const offset = 314 - (314 * percent) / 100;
+    circle.style.strokeDashoffset = offset;
+  });
+</script>
+
+</body>
+</html>
